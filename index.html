@@ -1,12 +1,47 @@
-
-
-<h1>Music Player</h1>
-<div class="button-container">
-    <button onclick="playMusic('Pop')">Pop</button>
-    <button onclick="playMusic('Rock')">Rock</button>
-    <button onclick="playMusic('Jazz')">Jazz</button>
-    <button onclick="playMusic('hipHop')">Hip-Hop</button>
-</div>
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Card Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Business Card Generator</h1>
+    <div class="form-container">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Your Name">
+        <br>
+        
+        <label for="title">Title:</label>
+        <input type="text" id="title" placeholder="Your Title">
+        <br>
+        
+        <label for="email">Email:</label>
+        <input type="text" id="email" placeholder="Your Email">
+        <br>
+        
+        <label for="location">Location:</label>
+        <input type="text" id="location" placeholder="Your Location">
+        <br>
+        
+        <label for="padding">Padding:</label>
+        <input type="range" id="padding" min="0" max="50" value="20" oninput="updatePaddingValue()">
+        <span id="paddingValue">20</span>px
+        <br>
+        
+        <label for="margin">Margin:</label>
+        <input type="range" id="margin" min="0" max="50" value="20" oninput="updateMarginValue()">
+        <span id="marginValue">20</span>px
+        <br>
+        
+        <button onclick="generateCard()">Generate Card</button>
+    </div>
+    
+    <div id="businessCard" class="card">
+        <!-- Business card content will appear here -->
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
